@@ -1,0 +1,2 @@
+Any web application that redirects to a URL that is specified via the request such as the querystring or form data can potentially be tampered with to redirect users to an external, malicious URL.
+In this example, a page was created to implement the transition. The transition address is passed through the get request parameter. There is no check for incorrect parameter.
