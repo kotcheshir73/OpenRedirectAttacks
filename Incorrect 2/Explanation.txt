@@ -5,4 +5,4 @@ HomeController.cs: 31-41. Method TestRedirect. The url is decrypted. Redirect to
 _Layout.cshtml: 31-32. Menu item added to menu. The parameter-url is registered in the menu item. The parameter-url is encrypted.
 TestRedirect.cshtml. Gets the url. When you click on the button, you should be redirected.
 
-Disadvantage: Vulnerability remains. If encryption is simple, then it is possible to crack it and replace the url.
+Disadvantage: Vulnerability remains. Using routes/links encoded as Base64 strings would only provide the illusion of security. An attacker can simply encode their own custom link to Base64 and pass it as a query parameter which could then be used for phishing scams as the link would look legitimate.
