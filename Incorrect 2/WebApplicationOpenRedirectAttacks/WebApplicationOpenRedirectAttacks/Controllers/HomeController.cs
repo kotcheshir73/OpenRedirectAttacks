@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplicationOpenRedirectAttacks.Models;
 
 namespace WebApplicationOpenRedirectAttacks.Controllers
 {
@@ -27,10 +28,16 @@ namespace WebApplicationOpenRedirectAttacks.Controllers
             return View();
         }
 
+        /// <summary>
+        /// View for call redirection
+        /// </summary>
+        /// <param name="url">Encrypted string</param>
+        /// <returns></returns>
         public ActionResult TestRedirect(string url)
         {
             var base64EncodedBytes = Convert.FromBase64String(url);
-            return Redirect(System.Text.Encoding.UTF8.GetString(base64EncodedBytes));
+
+            return View(new TestRedirect { Url = System.Text.Encoding.UTF8.GetString(base64EncodedBytes) });
         }
     }
 }

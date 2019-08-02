@@ -1,5 +1,6 @@
-﻿
-@model string
+﻿@using WebApplicationOpenRedirectAttacks.Models
+
+@model TestRedirect
 
 @{
     ViewBag.Title = "TestRedirect";
@@ -7,4 +8,12 @@
 
 <h2>TestRedirect</h2>
 
-<a type="button" href="@(Model)">Move here</a>
+<button id="Redirect">Redirect</button>
+
+<script>
+    $(function () {
+        $('#Redirect').click(function () {
+            document.location.href = '@Model.Url';
+        });
+    });
+</script>

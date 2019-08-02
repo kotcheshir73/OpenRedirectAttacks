@@ -1,2 +1,7 @@
-Any web application that redirects to a URL that is specified via the request such as the querystring or form data can potentially be tampered with to redirect users to an external, malicious URL.
-In this example, a page was created to implement the transition. The transition address is passed through the get request parameter. There is no check for incorrect parameter.
+Vulnerability: Open Redirect Attacks.
+Substitution of a line for another line. The goal is to redirect to a fake address.
+Example. 
+Get-Request /Home/TestRedirect. Parameter - url.
+HomeController.cs: 31-39. Method TestRedirect. The url is passed in the parameters. Redirect to this url is called.
+_Layout.cshtml: 31. Menu item added to menu. The parameter-url is registered in the menu item.
+TestRedirect.cshtml. Gets the url. When you click on the button, you should be redirected.

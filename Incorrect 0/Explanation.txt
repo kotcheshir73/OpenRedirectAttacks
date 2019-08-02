@@ -1,1 +1,8 @@
-The first attempt to solve the problem, go to the post-request. Post request can also be substituted. The solution is no good.
+Vulnerability: Open Redirect Attacks
+Incorrect 0. 
+Change get-request to post-request.
+HomeController.cs: 31-45. Method TestRedirect. The url is passed in the parameters. Url checked for equality to empty string. If the url is equal to the empty string, then redirect to the home page. Redirect to this url is called.
+_Layout.cshtml: 31, 44-57. Menu item added to menu. Adding a script to call a post-request. The parameter-url is registered in the script.
+TestRedirect.cshtml. Gets the url. When you click on the button, you should be redirected.
+
+Disadvantage: the request can also be substituted.

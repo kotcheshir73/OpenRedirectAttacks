@@ -1,1 +1,8 @@
-The second attempt to solve the problem is to add regular expressions to test. It is possible not to take into account all the options for the url.
+Vulnerability: Open Redirect Attacks
+Incorrect 1. 
+Adding a url check to the pattern.
+HomeController.cs: 32-45. Method TestRedirect. The url is passed in the parameters. Url checked for equality to empty string or not equal to the pattern. If the url is equal to the empty string or not equal to the pattern, then redirect to the home page. Redirect to this url is called.
+_Layout.cshtml: 31. Menu item added to menu. The parameter-url is registered in the menu item.
+TestRedirect.cshtml. Gets the url. When you click on the button, you should be redirected.
+
+Disadvantage: The difficulty of working with templates. It does not guarantee 100% protection. May not miss the correct address.

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplicationOpenRedirectAttacks.Models;
 
 namespace WebApplicationOpenRedirectAttacks.Controllers
 {
@@ -27,6 +28,11 @@ namespace WebApplicationOpenRedirectAttacks.Controllers
             return View();
         }
 
+        /// <summary>
+        /// View for call redirection
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult TestRedirect(string url)
         {
@@ -35,7 +41,7 @@ namespace WebApplicationOpenRedirectAttacks.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            return Redirect(url);
+            return View(new TestRedirect { Url = url });
         }
     }
 }
