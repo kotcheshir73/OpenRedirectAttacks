@@ -1,5 +1,3 @@
-Vulnerability: Open Redirect Attacks
-Secure. 
 The standard method (IsLocalUrl) is used to verify that the address is local. Recommended to fix this vulnerability.
 HomeController.cs: 31-44. Method TestRedirect. Verification of the address. If the address is not local, then redirects to the home page. Redirect to this url is called.
 _Layout.cshtml: 31. Menu item added to menu. The parameter-url is registered in the menu item.

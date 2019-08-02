@@ -1,5 +1,3 @@
-Vulnerability: Open Redirect Attacks
-Incorrect 2. 
 An encrypted url is passed in the parameters.
 HomeController.cs: 31-41. Method TestRedirect. The url is decrypted. Redirect to this url is called.
 _Layout.cshtml: 31-32. Menu item added to menu. The parameter-url is registered in the menu item. The parameter-url is encrypted.

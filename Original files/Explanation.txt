@@ -5,3 +5,5 @@ Get-Request /Home/TestRedirect. Parameter - url.
 HomeController.cs: 31-39. Method TestRedirect. The url is passed in the parameters. Redirect to this url is called.
 _Layout.cshtml: 31. Menu item added to menu. The parameter-url is registered in the menu item.
 TestRedirect.cshtml. Gets the url. When you click on the button, you should be redirected.
+
+Open the application in the Visual Studio (version 2017 or higher). Run it. In the menu, select "TestRedirect". Click the "Redirect" for check.
